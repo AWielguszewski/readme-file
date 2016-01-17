@@ -1,0 +1,35 @@
+{
+  "name": "readme-file",
+  "version": "0.0.0",
+  "description": "Get the name of README file in a directory",
+  "author": "Eugene Sharygin <eush77@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/eush77/readme-file",
+  "repository": "eush77/readme-file",
+  "bugs": {
+    "url": "https://github.com/eush77/readme-file/issues"
+  },
+  "keywords": [
+    "basename",
+    "directory",
+    "file",
+    "filename",
+    "help",
+    "manual",
+    "project",
+    "readme",
+    "readme.md"
+  ],
+  "dependencies": {
+    "readme-filenames": "^1.0.1"
+  },
+  "devDependencies": {
+    "tape": "^4.4.0"
+  }
+}
