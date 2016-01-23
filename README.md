@@ -17,7 +17,7 @@ Get the name of README file in a directory.
 var readmeFile = require('readme-file');
 
 readmeFile('.')
-//=> "README.md"
+//=> "/path/to/README.md"
 
 try {
   readmeFile('/tmp')
@@ -32,7 +32,7 @@ catch (err) {
 
 #### `readmeFile(dir)`
 
-Returns the basename of a README file in the directory or throws an error.
+Returns the path to README file in the directory or throws an error.
 
 ## Install
 

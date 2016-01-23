@@ -2,7 +2,8 @@
 
 var readmeFilenames = require('readme-filenames');
 
-var fs = require('fs');
+var fs = require('fs'),
+    path = require('path');
 
 
 module.exports = function (dir) {
@@ -19,5 +20,5 @@ module.exports = function (dir) {
     throw Error('README file not found in ' + dir);
   }
 
-  return readmeFile;
+  return path.join(dir, readmeFile);
 };
