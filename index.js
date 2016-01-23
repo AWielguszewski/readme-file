@@ -20,5 +20,5 @@ module.exports = function (dir) {
     throw Error('README file not found in ' + dir);
   }
 
-  return path.join(dir, readmeFile);
+  return path.join(fs.realpathSync(dir), readmeFile);
 };

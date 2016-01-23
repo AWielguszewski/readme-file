@@ -1,6 +1,6 @@
 'use strict';
 
-var readmeFile = require('..');
+var getReadmeFile = require('..');
 
 var test = require('tape');
 
@@ -9,10 +9,12 @@ var path = require('path');
 
 test(function (t) {
   var dir = path.dirname(__dirname);
-  t.equal(readmeFile(dir), path.join(dir, 'README.md'));
+  var readmeFile = path.join(dir, 'README.md');
+  t.equal(getReadmeFile(dir), readmeFile);
+  t.equal(getReadmeFile(path.relative(process.cwd(), dir) || '.'), readmeFile);
 
-  t.throws(readmeFile.bind(null, __dirname), /README/);
-  t.throws(readmeFile.bind(null, '/tmp'), /README/);
+  t.throws(getReadmeFile.bind(null, __dirname), /README/);
+  t.throws(getReadmeFile.bind(null, '/tmp'), /README/);
 
   t.end();
 });
